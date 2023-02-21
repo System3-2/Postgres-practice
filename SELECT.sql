@@ -8,8 +8,15 @@
 
  SELECT * FROM users WHERE id > 500 ORDER by id DESC;
 
+-- SELECT BY COUNTRY
 
 SELECT * FROM users WHERE country = 'France';
+
+-- SELECT BY GENDER
+
+SELECT DISTINCT gender FROM users;
+
+
 
 -- GROUP BY CLAUSE
 
@@ -25,6 +32,11 @@ SELECT id, first_name FROM users GROUP BY id, first_name;
 
  SELECT * FROM users WHERE last_name LIKE '____lon';
 
+-- SELECT BY ILIKE CLAUSE
+
+SELECT * FROM users WHERE gender ILIKE 'POLYGENDER';
+
+SELECT * FROM users WHERE first_name ILIKE 'PAUL%';
 
 -- SELECTING DISTINCT
 
@@ -36,4 +48,7 @@ SELECT DISTINCT id, first_name, last_name FROM users ORDER BY id ASC;
 
 SELECT * FROM users LIMIT 40;
 
+SELECT * FROM users OFFSET 950;
+
 SELECT * FROM users LIMIT 10 OFFSET 20;
+
